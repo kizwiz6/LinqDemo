@@ -32,7 +32,7 @@
         // show a sorted list
         var sortedScores =
             from item in scores
-            orderby item
+            orderby item descending
             select item;
 
         // print only the best scores
