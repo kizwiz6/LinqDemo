@@ -28,5 +28,19 @@
 
         // Pause to see the output
         Console.ReadLine();
+
+        // show a sorted list
+        var sortedScores =
+            from item in scores
+            orderby item
+            select item;
+
+        // print only the best scores
+        foreach (var item in sortedScores)
+        {
+            Console.WriteLine("One of the highest scores was {0}", item);
+        }
+
+        Console.ReadLine();
     }
 }
