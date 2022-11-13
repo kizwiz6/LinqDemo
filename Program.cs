@@ -13,5 +13,20 @@
 
         // pause statement to see the output
         Console.ReadLine();
+
+        // use LINQ to filter the list
+        var theBestStudents =
+            from item in scores
+            where item > 90
+            select item;
+
+        // print only the best scores
+        foreach (var item in theBestStudents)
+        {
+            Console.WriteLine("One of the highest scores was {0}", item);
+        }
+
+        // Pause to see the output
+        Console.ReadLine();
     }
 }
